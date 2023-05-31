@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>color_blind_race</title>
+    <meta charset="UTF-8">
+    <link href="./styles/user_style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <script src="./script/click_event.js"></script>
+    <script src="./script/client_listener.js"></script>
+    <!-- ============================================ game_interface ============================================ -->
+    <div id = "frame">
+        <div id = "game_state">
+            <div id = "timer">0 </div>
+            <div class = "round_state"> Round : <span id="user_round_text" class = "round_state">1</span></div>
+        </div>
+        <div class="wrap">
+            <div class="client_side">
+                <div class="section">
+                    <div id ="user_name">user name</div>
+                    <div class="section-middle client_side" id="client-side-cblock">
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                        <div class="color_blocks"></div>
+                    </div>
+                        <div id ="user_state_bar">
+                            <div id = "wrong_count">0</div>
+                            <div id = "user_score">0</div>
+                            <div class = "win_count_state"> Win Count : <span id="user_win_count_text" class = "win_count_state">0</span></div>
+                        </div>
+                  </div>
+            </div>
+            
+            <div class="opponent_side">
+                <div class="section">
+                    <div id ="opponent_name">opponent name</div>
+                    <div class="section-middle opponent_side" id="opponent-side-cblock">
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                        <div class="opponent_color_blocks"></div>
+                    </div>
+                        <div id ="opponent_state_bar">
+                            <div id = "opponent_score">0</div>
+                            <div class = "win_count_state"> Win Count : <span id="opponent_win_count_text" class = "win_count_state">0</span></div>
+                        </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================ game_interface ============================================ -->
+    <!-- ============================================ login_interface ============================================ -->
+    <div id="window-cover" class="show"></div>
+    <div id="pop_up_window" class="show">
+        <div id="login-panel">
+            <div style="text-align: center; font-size: 50px;">Color Block Race</div>
+            <div style="text-align: center;">How to destroy your eyes in 60 sec, or more</div>
+            <div id ="ur_i">👁️‍🗨️</div>
+            <div style="text-align: center;">Your name：
+            <input maxlength="25" type="text" id="input_user_name" class="info-text-input"/></div>
+            <div style="text-align: center;"><button id="login_button">START</button></div>
+        </div>
+        <div id = "message_box" style= "display:none">
+            <div id = "message_title">Message title</div>
+            <div id="message_context">Message</div>
+            <button id="message_button">Confirm</button>
+        </div>
+        <div id = "wait4start" style= "display:none">
+            <div id = "loading_text">Wait for another client connect...</div>
+        </div>
+    </div>
+    <!-- ============================================ login_interface ============================================ -->
+</body>
+</html>
