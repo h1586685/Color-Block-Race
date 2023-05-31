@@ -8,4 +8,8 @@ Identify different colors in order to defeat your opponents.
 
 Features
 ---
-+ 
++ Real-time updating of opponents state
++ The server-side verifies the answers of color.
+
+Flow
+---
